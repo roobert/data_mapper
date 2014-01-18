@@ -13,9 +13,7 @@ module DataMapper
   # * network  name
   #
 
-  def load_data
-
-    switches = %w[ispsw03xa ispsw03xg ispsw03yc ispsw03yh]
+  def load_data(switches)
 
     @network = NetworkDataTranslator::Network.new('bunker')
 
