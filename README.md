@@ -15,8 +15,8 @@ First create the database tables:
 ./schema.rb
 ```
 
-Now load data into the database:
+Now you can periodically load data into the database:
 
 ```
-./load_data switch0 switch1 switch2 switch3
+while sleep 60; do ./load_data switch0 switch1 switch2 switch3; done
 ```
