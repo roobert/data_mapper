@@ -20,7 +20,11 @@ First create the database tables:
 Now you can periodically load data into the database:
 
 ```
-while sleep 60; do ./load_data switch0 switch1 switch2 switch3; done
+while sleep 60; do
+  rm -rf data
+  cp -R ../data_fetch_daemon/data
+  ./load_data switch0 switch1 switch2 switch3
+done
 ```
 
 lib/model.rb can then be loaded into your app to provide access to the data.
