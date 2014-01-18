@@ -197,7 +197,4 @@ module DataMapper
       end
     end
   end
-
-## mac addresses are only associated with vlans - they should be associated with switchports too so 'access' mode shizzle will work.
-## if a switchport is in 'access' mode is it considered attached to vlan 1 by default? - if so we can do some jiggerypokery
 end
