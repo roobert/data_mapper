@@ -11,8 +11,12 @@ Database operations are performed in a transaction - everytime this program is r
 
 First create the database tables:
 
- ./schema.rb
+```
+./schema.rb
+```
 
 Now load data into the database:
 
- ./load_data switch0 switch1 switch2 switch3
+```
+./load_data switch0 switch1 switch2 switch3
+```
