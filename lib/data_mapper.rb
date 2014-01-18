@@ -7,12 +7,6 @@ module DataMapper
     "#{mac[0..1]}:#{mac[2..3]}:#{mac[4..5]}:#{mac[6..7]}:#{mac[8..9]}:#{mac[10..11]}".upcase
   end
 
-  # options:
-  #
-  # * switches
-  # * network  name
-  #
-
   def load_data(switches)
 
     @network = NetworkDataTranslator::Network.new('bunker')
