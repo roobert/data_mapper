@@ -24,9 +24,14 @@ MCOLLECTIVE_DIR  = File.join(DATA_DIR, 'mcollective')
 
 raise 'fatal error!' unless Network.table_exists?
 
+begin
+  raise "no switches were specified!" if ARGV.empty?
+rescue => e
+  puts e
+  exit 1
+end
+
 include DataMapper
 
-if Network.all.length == 0
-  load_data ARGV
-  map_data
-end
+load_data ARGV
+map_data

@@ -37,8 +37,21 @@ module DataMapper
   def map_data
     ActiveRecord::Base.transaction do
 
+      # FIXME: why isn't ON CASCADE DELETE working..?
       Network.delete_all
       BridgeAddressTable.delete_all
+      Network.delete_all
+      Switch.delete_all
+      Machine.delete_all
+      MachineInterface.delete_all
+      IpAddress.delete_all
+      BridgeAddressTable.delete_all
+      BridgeVlan.delete_all
+      Mac.delete_all
+      VlanInterface.delete_all
+      EthernetInterface.delete_all
+      Switchport.delete_all
+      Vlan.delete_all
 
       @network.machines.machines.each do |machine|
 
